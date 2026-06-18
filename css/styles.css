@@ -1,0 +1,721 @@
+/* ===== RESET & GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FIX: Prevent horizontal scrolling on mobile devices */
+html, body {
+    overflow-x: hidden; 
+    width: 100%; 
+}
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fafafa url(elements/seamless_bg.png) repeat;
+}
+
+* h1, h2, h3 {
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+p {
+    font-family: 'Noto Sans', sans-serif;
+}
+.plain-link {
+    text-decoration: none; 
+    color: inherit; 
+    cursor: pointer; 
+}
+
+
+/* ===== NAVBAR ===== */
+nav {
+    background: rgb(112, 94, 81);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav img {
+    height: 40px;
+    margin-right: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc66;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-right ul li a {
+    border: 1px solid #fff;
+    padding: 5px 1.5rem;
+    border-radius: 30px;
+}
+
+.nav-right ul li a:hover {
+    color: #ffcc66;
+}
+
+.nav-right .store-find {
+    border: none;
+}
+
+.nav-right .store-find:hover {
+    color: #1c3028;
+}
+
+.nav-right .sign-in:hover {
+    background: white;
+    color:#705e51;
+}
+
+.nav-right .join-now {
+    background:#2C4A3F;
+    color: white;
+    border: none;
+}
+
+.nav-right .join-now:hover {
+    background: #1c3028;
+    color: white;
+}
+
+
+/* ===== HERO (Main Size Adjusted) ===== */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Menu Page Hero - DEFAULT (Desktop/Tablet) */
+.hero {
+    width: 100%;
+    /* INCREASED DEFAULT HEIGHT (was 300px) */
+    height: 350px; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2C4A3F; 
+}
+.hero-header {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-width: 100%; 
+}
+
+
+/* ===== ADVERTISEMENT (Not used in menu.html) ===== */
+.advertisment {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #2C4A3F;
+}
+
+.ad-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.ad-container img {
+    max-width: 100%;
+}
+
+.ad-quote {
+    font-weight: bold;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 3rem;
+    color: #fff7d4;
+    margin-top: 1rem;
+}
+
+/* ===== ABOUT (Not used in menu.html) ===== */
+.about-us {
+    padding: 4rem 2rem;
+    background: beige;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-col {
+    flex: 1 1 400px;
+    max-width: 600px;
+}
+
+.about-col img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.story-text p {
+    margin-bottom: 1rem;
+}
+
+.story-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+/* ===== TEAM (Not used in menu.html) ===== */
+.team-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: beige;
+}
+
+.team-header {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-family: 'Pathway Gothic One', sans-serif;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    max-width: 250px;
+}
+
+.team-member img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* ===== CONTACT US (Not used in menu.html) ===== */
+.contact-header {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-family: 'Pathway Gothic One', sans-serif;
+    text-align: center;
+}
+
+.contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: beige;
+}
+
+
+/* ------------------------------------------- */
+/* ===== MENU PAGE SPECIFIC STYLES ===== */
+/* ------------------------------------------- */
+.menu-section {
+    background-color: #f9f6f0; 
+    padding: 60px 20px;
+}
+
+.menu-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #334632;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.menu-text {
+    color: #181a18;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: center;
+    position: relative;
+}
+
+.menu-text::after {
+    content: "";
+    display: block;
+    width: 500px;
+    max-width: 90%;
+    height: 2px;
+    background: #181a18;
+    margin: 20px auto 0;
+}
+
+/* MAIN MENU GRID (SIDEBAR + CONTENT) */
+.menu-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- SIDEBAR --- */
+.menu-sidebar {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: fit-content;
+    color: #2C4A3F;
+    position: sticky; 
+    top: 20px; 
+}
+
+/* Hide the mobile jumps on desktop */
+.mobile-menu-jumps {
+    display: none;
+}
+
+.menu-sidebar h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2C4A3F;
+    margin-bottom: 10px;
+}
+
+.menu-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.menu-sidebar ul li {
+    margin-bottom: 8px;
+    color: #705E51;
+    font-size: 0.95rem;
+    padding-left: 15px;
+    position: relative;
+}
+
+.menu-sidebar ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2C4A3F;
+    font-weight: bold;
+}
+
+/* --- MENU CONTENT --- */
+.section-title {
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2C4A3F;
+    margin: 40px 0 20px;
+}
+
+.drink-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.drink-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-box {
+    width: 100%;
+    height: 180px;
+    background: #2C4A3F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.image-box img {
+    max-height: 150px;
+    width: auto;
+}
+
+.image-box.question-mark {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.drink-name {
+    font-weight: bold;
+    margin-top: 5px;
+    color: #2C4A3F;
+}
+
+.drink-price {
+    font-size: 0.9rem;
+    color: #705E51;
+}
+
+/* ------------------------------------------- */
+/* ===== FOOTER (UPDATED) ===== */
+/* ------------------------------------------- */
+footer {
+    /* Kept your existing background styles */
+    background-color: #f5f0e6;; 
+    background-size: cover; 
+    /* Main text color remains light for readability on dark background */
+    color: #334632; 
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-column h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column a {
+    /* MODIFIED: Changed main link color to a more muted tone */
+    color: #334632; 
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    /* MODIFIED: Changed hover color to a more subtle accent */
+    color: #b69255; 
+}
+
+.footer-logo img {
+    height: 60px;
+    margin: 1.5rem 0;
+}
+
+.social-icons img {
+    width: 100px;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    /* Main icon color remains light for visibility */
+    color: #334632; 
+}
+
+.footer-bottom p {
+    color: #334632;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    /* Main link color remains light for visibility with the main text */
+    color: #334632; 
+    margin: 0 5px; 
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    /* MODIFIED: Changed bottom link hover color */
+    color: #b69255;
+}
+.footer-logo img {
+    height: 60px;
+    margin: 1.5rem 0;
+}
+
+.footer-bottom p {
+    color: #334632; /* Lighter text color */
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    color: #334632; /* Lighter link color */
+    margin: 0 5px; 
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #ffcc66;
+}
+
+
+/* ===== EVENTS STYLES FIX ===== */
+.hero-events img {
+    width: 100%;
+    height: auto;
+}
+
+.events-container {
+    margin: 0 auto;
+    padding: 40px 5px; /* Added vertical padding for spacing */
+    /* REMOVED: height: 80vh; - allowing content to determine the height */
+    max-width: 1000px; /* Added max-width for better control */
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px; /* Added gap to improve layout */
+}
+
+.box {
+    text-align: center;
+}
+
+.box img {
+    width: 100%; /* Changed from 10cm to 100% of the box width */
+    max-width: 200px;
+    height: auto;
+}
+
+.box:first-child {
+    grid-column: 1/3;
+    justify-content: center;
+    text-align: center;
+}
+
+.events-container h3 {
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: #2C4A3F;
+}
+
+.events-container p {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+/* ===== CONSTRUCTION ===== */
+.construction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.85); /* translucent white so beans show faintly */
+}
+
+.warning-icon {
+    width: 100px;
+    margin-bottom: 1rem;
+}
+
+.main-message {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #b91c1c;
+    margin-bottom: 0.5rem;
+}
+
+.sub-message {
+    font-size: 1rem;
+    color: #374151;
+    margin-bottom: 1.5rem;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #facc15;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #eab308;
+}
+
+
+@media (max-width: 768px) {
+    /* Mobile adjustments */
+    
+    /* NAV BAR Adjustments - Stack for mobile */
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    
+    .nav-left {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Hide the main nav text links on small screens to save space */
+    .nav-left ul {
+        display: none; 
+    }
+
+    .nav-right {
+        width: 100%;
+    }
+    .nav-right ul {
+        gap: 0.5rem;
+        justify-content: space-around;
+    }
+    .nav-right ul li a {
+        padding: 5px 1rem;
+        font-size: 0.8rem;
+    }
+    /* Hide 'Find a Store' on very small screens for space */
+    .nav-right .store-find {
+        display: none; 
+    }
+
+    /* MENU-SPECIFIC (Keep existing rules) */
+    .hero {
+        height: 300px; 
+    }
+    .menu-container {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    .menu-sidebar {
+        display: none;
+    }
+    .mobile-menu-jumps {
+        display: flex;
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 15px 10px; 
+    }
+    .mobile-menu-jumps a {
+        background: #705E51;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+    .drink-row {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 15px;
+    }
+    .image-box {
+        height: 140px;
+    }
+    
+    
+    /* EVENTS PAGE ADJUSTMENTS (FIXED for Image / Title / Info stack) */
+    
+    /* 1. Force events-container to a single column and increase padding */
+    .events-container {
+        grid-template-columns: 1fr; 
+        padding: 40px 20px;
+        gap: 30px; /* Space between each image-text group */
+    }
+
+    /* 2. Reset the first box (spacer) column span and remove its <br> tags */
+    .box:first-child {
+        grid-column: auto; 
+    }
+    .box:first-child br {
+        display: none;
+    }
+
+    /* 3. Ensure all children of events-container take full width and center text */
+    .events-container > div {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    
+    /* 4. Style the Image Box */
+    .box {
+        /* This targets the div containing the image */
+        margin-bottom: 0.5rem; 
+        max-width: none;
+    }
+
+    .box img {
+        /* Constrain image size and ensure it's centered */
+        max-width: 250px; 
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0; 
+        display: block; 
+    }
+    
+    /* 5. Adjust the title/paragraph alignment and spacing */
+    .events-container h3 {
+        margin-top: 0;
+        font-size: 1.5rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+    }
+    .events-container p {
+        font-size: 1rem;
+        margin-bottom: 0; /* Let the container gap handle spacing */
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+  @media (max-width: 768px) {
+  nav ul li { display: none; }
+  nav ul li:nth-child(1),
+  nav ul li:nth-child(2),
+  nav ul li:nth-child(3) {
+    display: inline-block;
+    }
+  }
+}
